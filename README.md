@@ -1,5 +1,10 @@
 [![Check Assignment](https://github.com/sta523-fa24/project-team_name/workflows/Check%20Assignment/badge.svg)](https://github.com/sta523-fa24/project-team_name/actions?query=workflow:%22Check%20Assignment%22)
 
+## Brief Introduction
+This is my group's final project for STA 523 (R Programming): a data archive NCAA basketball data analysis Shiny app. It includes match, team, and player analysis, as well as visualization and prediction features.
+
+This project was created by Yiming Cheng, Zhihao Chen, Beijie Ji,  Weitong Liang, Yixiao Wang, under the instruction of Assistant Professor Colin Rundel for the Fall 2024 section of STA 523: Statistical Programming at Duke University.
+
 
 Sta 523 - Final Project
 -----------
