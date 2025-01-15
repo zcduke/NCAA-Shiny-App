@@ -1,0 +1,28 @@
+on: push
+name: Check Assignment
+jobs:
+  check-renders:
+    runs-on: self-hosted
+    container:
+      image: ghcr.io/sta523-fa24/sta523-base:latest
+    steps:
+    - name: Remove old artifacts
+      uses: c-hive/gha-remove-artifacts@v1
+      with:
+        age: '0 seconds' # parsed by Moment.js
+        skip-tags: false
+        skip-recent: 0
+    
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: Check
+      run: |
+        checklist::check_qmd_renders("project.qmd", install_missing=TRUE)
+      shell: Rscript {0}
+    
+    - name: Create artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: project-html
+        path: project.html
